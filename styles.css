@@ -262,7 +262,7 @@ nav {
 /* ── Sketch Avatar Card ── */
 .hero-visual {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   position: relative;
 }
@@ -279,6 +279,7 @@ nav {
   transition: all 0.35s ease;
   max-width: 360px;
   width: 100%;
+  margin-left: auto;
 }
 
 .sketch-card:hover {
@@ -1091,9 +1092,11 @@ footer {
   }
   .hero-visual {
     order: -1;
+    justify-content: center;
   }
   .sketch-card {
     max-width: 320px;
+    margin: 0 auto;
   }
 }
 
