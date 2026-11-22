@@ -970,11 +970,12 @@
       });
     });
 
-    const scrollObserver = new IntersectionObserver((entries, obs) => {
+    const scrollObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('revealed');
-          obs.unobserve(entry.target);
+        } else {
+          entry.target.classList.remove('revealed');
         }
       });
     }, {
