@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shreya Shaw – Android Developer | Kotlin, Jetpack Compose &amp; Clean Architecture</title>
+  <meta name="description"
+    content="Portfolio of Shreya Shaw, an Android Developer and CSE student with 2+ years of experience building scalable, production-grade Android applications using Kotlin, Jetpack Compose, MVVM, and Firebase." />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="scene3d.js" defer></script>
+</head>
+
+<body>
+  <div class="noise-bg"></div>
+  <canvas id="webgl-canvas"></canvas>
+  <div class="fluid-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-logo">
+      Shreya<span>.</span>
+    </div>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="mailto:shawshreya097@gmail.com">Get in Touch ↗</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Sketch Avatar Card -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          // Android Developer · Roorkee, Uttarakhand, India
+        </div>
+        <h1 class="hero-name">
+          Shreya<br /><em>Shaw</em>
+          <span class="hero-badge-pill">Mobile Software Engineer</span>
+        </h1>
+        <p class="hero-role">
+          Computer Science Engineering student with <strong>2+ years of self-directed Android engineering experience</strong>.
+          Proficient in <strong>Kotlin</strong>, <strong>Jetpack Compose</strong>, <strong>MVVM architecture</strong>,
+          and <strong>Firebase</strong>, with a strong foundation in building scalable, production-ready mobile applications.
+        </p>
+
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="mailto:shawshreya097@gmail.com">Get in Touch ↗</a>
+          <a class="btn btn-ghost" href="#projects">Explore Projects ↓</a>
+          <a class="btn btn-ghost" href="https://github.com/bytecraft-sys" target="_blank">GitHub (18 Repos)</a>
+          <a class="btn btn-ghost" href="https://linkedin.com/in/shreya-shaw" target="_blank">LinkedIn</a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <div class="stat-num">2+</div>
+            <div class="stat-label">Years Android Experience</div>
+          </div>
+          <div>
+            <div class="stat-num">18</div>
+            <div class="stat-label">Shipped Repositories</div>
+          </div>
+          <div>
+            <div class="stat-num">330+</div>
+            <div class="stat-label">Hackathon Competitors ('25)</div>
+          </div>
+          <div>
+            <div class="stat-num">2×</div>
+            <div class="stat-label">IIT Bombay Certified</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Sketch Face Developer Card -->
+      <div class="hero-visual">
+        <div class="sketch-card">
+          <div class="sketch-card-status">
+            <span>DEVELOPER PROFILE</span>
+            <span class="status-badge">
+              <span class="status-dot"></span> Available for Roles
+            </span>
+          </div>
+
+          <div class="sketch-img-wrapper">
+            <img src="avatar-sketch.jpg" alt="Hand-drawn artistic sketch portrait of Shreya Shaw" class="sketch-avatar-img" />
+          </div>
+
+          <div class="sketch-card-footer">
+            <div class="sketch-card-name">Shreya Shaw</div>
+            <div class="sketch-card-title">Android Developer &amp; CSE Undergraduate</div>
+            <div class="sketch-card-pills">
+              <span class="mini-pill">Kotlin</span>
+              <span class="mini-pill">Jetpack Compose</span>
+              <span class="mini-pill">Clean Architecture</span>
+              <span class="mini-pill">Firebase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorized Projects Section -->
+  <section id="projects">
+    <div class="section-tag">// 01 — Portfolio</div>
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-subtitle">
+      A comprehensive showcase of production applications, AI integrations, hackathon builds, cross-platform Flutter tools, and backend utilities. Filter by domain below.
+    </p>
+
+    <!-- Category Filter Bar -->
+    <div class="category-filter-wrapper">
+      <div class="category-tabs" id="categoryTabs">
+        <button class="cat-btn active" data-filter="all">
+          <span>All Projects</span> <span class="badge-count">18</span>
+        </button>
+        <button class="cat-btn" data-filter="flagship">
+          <span>Flagship Android</span> <span class="badge-count">4</span>
+        </button>
+        <button class="cat-btn" data-filter="native-android">
+          <span>Native Compose</span> <span class="badge-count">6</span>
+        </button>
+        <button class="cat-btn" data-filter="hackathons">
+          <span>Hackathons</span> <span class="badge-count">2</span>
+        </button>
+        <button class="cat-btn" data-filter="cross-platform">
+          <span>Flutter &amp; Cross-Platform</span> <span class="badge-count">3</span>
+        </button>
+        <button class="cat-btn" data-filter="python-systems">
+          <span>Python &amp; Systems</span> <span class="badge-count">2</span>
+        </button>
+        <button class="cat-btn" data-filter="web-3d">
+          <span>Web &amp; 3D</span> <span class="badge-count">1</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-grid" id="projectsGrid">
+
+      <!-- 1. Ethos -->
+      <div class="project-card" data-category="flagship">
+        <div class="project-top">
+          <span class="project-num">001</span>
+          <span class="project-cat-tag">Flagship Android</span>
+        </div>
+        <h3 class="project-title">Ethos – Event Management App</h3>
+        <p class="project-desc">
+          Delivered an Android event budgeting and vendor management app enabling users to track total budgets, expenditures, and vendor costs across multiple events with task planning support.
+        </p>
+        <ul class="project-bullets">
+          <li><strong>Real-Time Synchronization:</strong> Integrated Firebase Firestore and Storage for live multi-device data persistence.</li>
+          <li><strong>Architecture:</strong> Architected with MVVM, Hilt dependency injection, and a Material 3 Jetpack Compose UI.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span><span class="tag">Firebase</span><span class="tag">MVVM</span><span class="tag">Hilt</span><span class="tag">Material 3</span>
+        </div>
+        <a class="project-link" href="https://github.com/bytecraft-sys/ethos" target="_blank">View on GitHub ↗</a>
+      </div>
+
+      <!-- 2. Aura -->
+      <div class="project-card" data-category="flagship">
+        <div class="project-top">
+          <span class="project-num">002</span>
+          <span class="project-cat-tag">Flagship Android</span>
+        </div>
+        <h3 class="project-title">Aura – AI Chat App</h3>
+        <p class="project-desc">
+          AI-powered conversational application featuring a 3-step onboarding flow (HorizontalPager), DataStore profile persistence, Room-backed paged chat history, and Google Gemini SDK integration.
+        </p>
+        <ul class="project-bullets">
+          <li><strong>State Machine:</strong> Implemented a coroutine-based sealed-class state machine (Typing → Processing → Responding → Idle) with 8s timeout and job cancellation.</li>
+          <li><strong>Test Coverage:</strong> Comprehensive unit test suite implemented using StandardTestDispatcher.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Kotlin</span><span class="tag">Compose</span><span class="tag">Google Gemini SDK</span><span class="tag">Room DB</span><span class="tag">Hilt</span><span class="tag">DataStore</span>
+        </div>
+        <a class="project-link" href="https://github.com/bytecraft-sys/application" target="_blank">View on GitHub ↗</a>
+      </div>
+
+      <!-- 3. Let's Continue -->
+      <div class="project-card" data-category="flagship">
+        <div class="project-top">
+          <span class="project-num">003</span>
+          <span class="project-cat-tag">Flagship Android</span>
+        </div>
+        <h3 class="project-title">Let's Continue – Real-Time Chat App</h3>
+        <p class="project-desc">
+          Engineered a real-time messaging system with Firebase Firestore snapshot listeners for instant communication, persistent sessions, and reactive state management.
+        </p>
+        <ul class="project-bullets">
+          <li><strong>Real-Time Sync:</strong> Subscribed to Firestore snapshot listeners for immediate message dispatch.</li>
+          <li><strong>Authentication &amp; State:</strong> Integrated Firebase Authentication for secure login with MVVM and StateFlow architecture.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span><span class="tag">Firebase Auth</span><span class="tag">Firestore</span><span class="tag">MVVM</span><span class="tag">StateFlow</span>
+        </div>
+        <a class="project-link" href="https://github.com/bytecraft-sys/let-s-continue" target="_blank">View on GitHub ↗</a>
+      </div>
+
+      <!-- 4. WeatherNow -->
+      <div class="project-card" data-category="flagship">
+        <div class="project-top">
+          <span class="project-num">004</span>
+          <span class="project-cat-tag">Flagship Android</span>
+        </div>
+        <h3 class="project-title">Weather App (WeatherNow)</h3>
+        <p class="project-desc">
+          Live weather forecasting app consuming the OpenWeather REST API via Retrofit with dynamic Jetpack Compose UI adapting to live weather conditions.
+        </p>
+        <ul class="project-bullets">
+          <li><strong>Offline Caching:</strong> Integrated Room DB caching for offline access and ~30% reduction in redundant API requests.</li>
+          <li><strong>Clean Architecture:</strong> Layered architecture cleanly separating presentation, domain, and data sources.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Kotlin</span><span class="tag">Compose</span><span class="tag">Retrofit</span><span class="tag">Room DB</span><span class="tag">REST API</span><span class="tag">Clean Architecture</span>
+        </div>
+        <a class="project-link" href="https://github.com/bytecraft-sys/WeatherNow" target="_blank">View on GitHub ↗</a>
+      </div>
+
+      <!-- 5. Astra SOS -->
+      <div class="project-card" data-category="hackathons">
+        <div class="project-top">
+          <span class="project-num">005</span>
+          <span class="project-cat-tag">Hackathon Build</span>
+        </div>
+        <h3 class="project-title">Astra SOS – Emergency Safety App</h3>
+        <p class="project-desc">
+          Competed among 330+ participants in a 36-hour AI-focused hackathon (QHackathon 2025 at Quantum University); shipped an Android emergency safety app with automated SOS alerts.
+        </p>
+        <ul class="project-bullets">
+          <li><strong>Alert Triggers:</strong> Instant emergency triggers with location broadcast to designated contacts.</li>
+          <li><strong>Location Sharing:</strong> Real-time GPS coordinate dispatching with low background power consumption.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Kotlin</span><span class="tag">Android Studio</span><span class="tag">GPS / Location</span><span class="tag">QHackathon 2025</span>
+        </div>
+        <a class="project-link" href="https://github.com/bytecraft-sys" target="_blank">View on GitHub ↗</a>
+      </div>
+
+      <!-- 6. Bug Bash Cultural Heritage -->
+      <div class="project-card" data-category="hackathons">
+        <div class="project-top">
+          <span class="project-num">006</span>
+          <span class="project-cat-tag">Hackathon Build</span>
+        </div>
+        <h3 class="project-title">Cultural Heritage Portal – Bug Bash</h3>
+        <p class="project-desc">
+          Designed and launched an interactive cultural heritage website with team Bug Bash under strict 24-hour hackathon constraints at RIT-A-THON 2025.
+        </p>
+        <ul class="project-bullets">
+          <li><strong>Rapid Delivery:</strong> Built and deployed an educational web portal under competitive constraints.</li>
+          <li><strong>Collaborative Design:</strong> Implemented responsive layouts with accessible asset presentation.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Web Frontend</span><span class="tag">UI/UX</span><span class="tag">Team Bug Bash</span><span class="tag">RIT-A-THON 2025</span>
+        </div>
+        <a class="project-link" href="https://github.com/bytecraft-sys" target="_blank">View on GitHub ↗</a>
+      </div>
+
+      <!-- 7. CampusOne -->
+      <div class="project-card" data-category="native-android">
+        <div class="project-top">
+          <span class="project-num">007</span>
+          <span class="project-cat-tag">Native Compose</span>
+        </div>
+        <h3 class="project-title">CampusOne – Student Companion App</h3>
+        <p class="project-desc">
+          Centralized Android campus utility integrating academic timetables, exam alerts, course files, and department notices into a modern mobile interface.
+        </p>
+        <ul class="project-bullets">
+          <li><strong>Declarative UI:</strong> Built with Material 3 Jetpack Compose for high visual fidelity and theme flexibility.</li>
+          <li><strong>Modular Layouts:</strong> Separated academic calendar feeds, lecture alerts, and student announcements.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span><span class="tag">Campus Tech</span><span class="tag">Android Studio</span>
+        </div>
+        <a class="project-link" href="https://github.com/bytecraft-sys/campusone" target="_blank">View on GitHub ↗</a>
+      </div>
+
+      <!-- 8. Lost & Found -->
+      <div class="project-card" data-category="native-android">
+        <div class="project-top">
+          <span class="project-num">008</span>
+          <span class="project-cat-tag">Native Compose</span>
+        </div>
+        <h3 class="project-title">Lost &amp; Found Portal</h3>
+        <p class="project-desc">
+          Campus recovery mobile application enabling users to log misplaced belongings, upload photo records, search by category, and securely connect with finders.
+        </p>
+        <ul class="project-bullets">
+          <li><strong>Item Categorization:</strong> Structured state pipeline with status tracking (Reported / Claimed / Returned).</li>
+          <li><strong>Verification Flow:</strong> In-app verification flow ensuring items are claimed by their verified owners.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Kotlin</span><span class="tag">Android</span><span class="tag">Cloud Sync</span><span class="tag">Material UI</span>
+        </div>
+        <a class="project-link" href="https://github.com/bytecraft-sys/Lost_And_Found-" target="_blank">View on GitHub ↗</a>
+      </div>
+
+      <!-- 9. ToDo App -->
+      <div class="project-card" data-category="native-android">
+        <div class="project-top">
+          <span class="project-num">009</span>
+          <span class="project-cat-tag">Native Compose</span>
+        </div>
+        <h3 class="project-title">ToDo App – Task Management</h3>
+        <p class="project-desc">
+          High-performance productivity app architected on MVVM with local database persistence, priority labeling, and intuitive swipe-to-complete interactions.
+        </p>
+        <ul class="project-bullets">
+          <li><strong>Offline Persistence:</strong> Room-backed local database with instantaneous offline reads and writes.</li>
+          <li><strong>Architecture:</strong> Unidirectional data flow managing task states, priorities, and deadlines.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Kotlin</span><span class="tag">Room DB</span><span class="tag">MVVM</span><span class="tag">Productivity</span>
+        </div>
+        <a class="project-link" href="https://github.com/bytecraft-sys/ToDo-app" target="_blank">View on GitHub ↗</a>
+      </div>
+
+      <!-- 10. My Order -->
+      <div class="project-card" data-category="native-android">
+        <div class="project-top">
+          <span class="project-num">010</span>
+          <span class="project-cat-tag">Native Compose</span>
+        </div>
+        <h3 class="project-title">My Order – E-Commerce Flow</h3>
+        <p class="project-desc">
+          E-commerce client showcasing interactive product catalogs, item quantity controls, real-time discount calculations, and payment status tracking.
+        </p>
+        <ul class="project-bullets">
+          <li><strong>Reactive State:</strong> StateFlow management handling cart additions, dynamic tax updates, and promo codes.</li>
+          <li><strong>Material Compose:</strong> Responsive product cards and multi-step checkout workflow.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span><span class="tag">E-Commerce</span><span class="tag">StateFlow</span>
+        </div>
+        <a class="project-link" href="https://github.com/bytecraft-sys/My-order" target="_blank">View on GitHub ↗</a>
+      </div>
+
+      <!-- 11. My Login -->
+      <div class="project-card" data-category="native-android">
+        <div class="project-top">
+          <span class="project-num">011</span>
+          <span class="project-cat-tag">Native Compose</span>
+        </div>
+        <h3 class="project-title">My Login – Authentication Suite</h3>
+        <p class="project-desc">
+          Modular authentication UI suite featuring real-time input validation regex, password strength meters, animated transitions, and OAuth/Firebase hooks.
+        </p>
+        <ul class="project-bullets">
+          <li><strong>Input Validation:</strong> Instant visual feedback for email structure and password complexity rules.</li>
+          <li><strong>Motion Design:</strong> Smooth transitions between Sign-In, Sign-Up, and Password Reset screens.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Kotlin</span><span class="tag">Compose</span><span class="tag">Auth UI</span><span class="tag">Motion Layout</span>
+        </div>
+        <a class="project-link" href="https://github.com/bytecraft-sys/my-login" target="_blank">View on GitHub ↗</a>
+      </div>
+
+      <!-- 12. Scientific Calculator -->
+      <div class="project-card" data-category="native-android">
+        <div class="project-top">
+          <span class="project-num">012</span>
+          <span class="project-cat-tag">Native Compose</span>
+        </div>
+        <h3 class="project-title">Scientific Calculator</h3>
+        <p class="project-desc">
+          Modular engineering calculator supporting 20+ mathematical and trigonometric functions, operator precedence evaluation, and calculation history.
+        </p>
+        <ul class="project-bullets">
+          <li><strong>OOP Parser:</strong> Object-oriented design parsing complex nested mathematical expressions reliably.</li>
+          <li><strong>Adaptive UI:</strong> Responsive grid layout optimizing for both standard and advanced engineering modes.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Kotlin</span><span class="tag">Android Studio</span><span class="tag">OOP</span><span class="tag">Material 3</span>
+        </div>
+        <a class="project-link" href="https://github.com/bytecraft-sys" target="_blank">View on GitHub ↗</a>
+      </div>
+
+      <!-- 13. BMI Calculator -->
+      <div class="project-card" data-category="cross-platform">
+        <div class="project-top">
+          <span class="project-num">013</span>
+          <span class="project-cat-tag">Flutter &amp; Cross-Platform</span>
+        </div>
+        <h3 class="project-title">BMI Calculator</h3>
+        <p class="project-desc">
+          A Flutter-based BMI calculator with a clean Material Design UI and instant health calculations based on user height, weight, and age metrics.
+        </p>
+        <ul class="project-bullets">
+          <li><strong>Visual Feedback:</strong> Dynamic classification indicating healthy weight ranges and health indicators.</li>
+          <li><strong>Cross-Platform Core:</strong> Single codebase rendering seamlessly on both Android and iOS devices.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Material Design</span><span class="tag">Health Tech</span>
+        </div>
+        <a class="project-link" href="https://github.com/bytecraft-sys/BMI-calculator" target="_blank">View on GitHub ↗</a>
+      </div>
+
+      <!-- 14. Order Tracker -->
+      <div class="project-card" data-category="cross-platform">
+        <div class="project-top">
+          <span class="project-num">014</span>
+          <span class="project-cat-tag">Flutter &amp; Cross-Platform</span>
+        </div>
+        <h3 class="project-title">Order Tracker Application</h3>
+        <p class="project-desc">
+          Mobile logistics tracking interface presenting real-time shipment updates, milestone delivery timelines, courier data, and dispatch notifications.
+        </p>
+        <ul class="project-bullets">
+          <li><strong>Milestone Visualizer:</strong> Step-by-step progress tracking illustrating package stages from dispatch to arrival.</li>
+          <li><strong>Clean State:</strong> Stateful widgets isolating timeline renders for low memory usage and high responsiveness.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Logistics UI</span><span class="tag">Timeline UI</span>
+        </div>
+        <a class="project-link" href="https://github.com/bytecraft-sys/order-tracker-application" target="_blank">View on GitHub ↗</a>
+      </div>
+
+      <!-- 15. Dinu -->
+      <div class="project-card" data-category="cross-platform">
+        <div class="project-top">
+          <span class="project-num">015</span>
+          <span class="project-cat-tag">Flutter &amp; Cross-Platform</span>
+        </div>
+        <h3 class="project-title">Dinu – Mobile Widget Sandbox</h3>
+        <p class="project-desc">
+          Cross-platform exploratory mobile utility investigating customized UI widgets, gesture detectors, responsive layouts, and state management patterns.
+        </p>
+        <ul class="project-bullets">
+          <li><strong>Custom Widgets:</strong> Developed reusable components testing complex animation controllers.</li>
+          <li><strong>Architecture:</strong> Modular project structure facilitating rapid UI testing and iteration.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Custom Widgets</span><span class="tag">Mobile UI</span>
+        </div>
+        <a class="project-link" href="https://github.com/bytecraft-sys/dinu" target="_blank">View on GitHub ↗</a>
+      </div>
+
+      <!-- 16. FixIt -->
+      <div class="project-card" data-category="python-systems">
+        <div class="project-top">
+          <span class="project-num">016</span>
+          <span class="project-cat-tag">Python &amp; Systems</span>
+        </div>
+        <h3 class="project-title">FixIt – Developer Workflow Automation</h3>
+        <p class="project-desc">
+          Python-based diagnostic and troubleshooting automation utility that inspects project dependencies, detects configuration errors, and automates common repairs.
+        </p>
+        <ul class="project-bullets">
+          <li><strong>Automated Diagnostics:</strong> Sweeps developer environments to identify missing packages and misconfigured paths.</li>
+          <li><strong>CLI Utility:</strong> Command-line utility providing formatted console reporting and automated remediation steps.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Python</span><span class="tag">CLI Automation</span><span class="tag">DevOps</span><span class="tag">Scripting</span>
+        </div>
+        <a class="project-link" href="https://github.com/bytecraft-sys/FixIt" target="_blank">View on GitHub ↗</a>
+      </div>
+
+      <!-- 17. Library Management -->
+      <div class="project-card" data-category="python-systems">
+        <div class="project-top">
+          <span class="project-num">017</span>
+          <span class="project-cat-tag">Python &amp; Systems</span>
+        </div>
+        <h3 class="project-title">Library Management System</h3>
+        <p class="project-desc">
+          Inventory and borrowing record system engineered on object-oriented programming principles, SQLite persistence, and structured transaction ledgers.
+        </p>
+        <ul class="project-bullets">
+          <li><strong>OOP Principles:</strong> Clear encapsulation of Book, Member, and Transaction models maintaining relational integrity.</li>
+          <li><strong>Database Engine:</strong> SQL queries managing borrowing history, availability statuses, and overdue fine calculations.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">OOP Design</span><span class="tag">Database</span>
+        </div>
+        <a class="project-link" href="https://github.com/bytecraft-sys/library-managnment" target="_blank">View on GitHub ↗</a>
+      </div>
+
+      <!-- 18. ByteCraft 3D Universe -->
+      <div class="project-card" data-category="web-3d">
+        <div class="project-top">
+          <span class="project-num">018</span>
+          <span class="project-cat-tag">Web &amp; 3D</span>
+        </div>
+        <h3 class="project-title">ByteCraft 3D Portfolio Universe</h3>
+        <p class="project-desc">
+          Interactive WebGL 3D developer portfolio combining Three.js physics, real-time lighting, interactive shaders, and glassmorphic modern styling.
+        </p>
+        <ul class="project-bullets">
+          <li><strong>Three.js Engine:</strong> Custom 3D mobile phone simulation with live glowing code shaders and floating MVVM nodes.</li>
+          <li><strong>Modern UX:</strong> Real-time category filtering, responsive typography, and customized particle effects.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Three.js</span><span class="tag">WebGL</span><span class="tag">JavaScript</span><span class="tag">CSS Glassmorphism</span>
+        </div>
+        <a class="project-link" href="https://github.com/bytecraft-sys/bytecraft-sys.github.io" target="_blank">View on GitHub ↗</a>
+      </div>
+
+    </div>
+
+    <!-- Show More Projects Button -->
+    <div class="show-more-wrapper" id="showMoreWrapper">
+      <button id="showMoreBtn" class="btn-show-more">
+        <span id="showMoreText">Show More Projects (12 More)</span>
+        <span class="btn-icon" id="showMoreIcon">↓</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Work History / Experience -->
+  <section id="experience"
+    style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="section-tag">// 02 — Career</div>
+    <h2 class="section-title">Work History</h2>
+    <div class="experience-list">
+      <div class="experience-card">
+        <div class="exp-header">
+          <div class="exp-title-group">
+            <div class="exp-role">Android Developer</div>
+            <div class="exp-company">Freelance / Self-Employed</div>
+          </div>
+          <div class="exp-meta">01/2023 – Present · Uttarakhand, India</div>
+        </div>
+        <p class="exp-desc">
+          Independently architected and shipped multiple production-grade Android applications over <strong>2+ years</strong> using
+          Kotlin, Jetpack Compose, Firebase, and MVVM – spanning event budgeting, AI conversational chat, real-time messaging, and weather forecasting.
+        </p>
+        <ul class="exp-bullets">
+          <li><strong>Architecture &amp; Dependency Injection:</strong> Structured multi-module applications with Clean Architecture and Hilt DI, establishing testable and maintainable codebases.</li>
+          <li><strong>Modern Declarative UI:</strong> Built fluid, responsive user interfaces with Material 3 Jetpack Compose, handling state preservation and adaptive screen configurations.</li>
+          <li><strong>Concurrency &amp; State Management:</strong> Implemented coroutine-based state machines utilizing StateFlow, handling timeout policies, cancellation, and unit test coverage with StandardTestDispatcher.</li>
+          <li><strong>Data Persistence:</strong> Engineered offline-first caching pipelines utilizing Room Database, DataStore, and Firebase Firestore reactive snapshot listeners.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Kotlin</span>
+          <span class="tag">Jetpack Compose</span>
+          <span class="tag">MVVM</span>
+          <span class="tag">Clean Architecture</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">Room DB</span>
+          <span class="tag">Hilt DI</span>
+          <span class="tag">Coroutines</span>
+          <span class="tag">StateFlow</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills Section -->
+  <section id="skills">
+    <div class="section-tag">// 03 — Toolkit</div>
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-label">Languages</div>
+        <ul class="skill-list">
+          <li>Kotlin (Advanced / Primary)</li>
+          <li>Java</li>
+          <li>Python</li>
+          <li>C</li>
+          <li>C++</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Android Development</div>
+        <ul class="skill-list">
+          <li>Android Studio</li>
+          <li>Jetpack Compose (Material 3)</li>
+          <li>MVVM Architecture</li>
+          <li>Room Database</li>
+          <li>Hilt (Dependency Injection)</li>
+          <li>DataStore &amp; AndroidX Paging</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Backend &amp; APIs</div>
+        <ul class="skill-list">
+          <li>Firebase Firestore</li>
+          <li>Firebase Auth &amp; Cloud Storage</li>
+          <li>Retrofit &amp; REST APIs</li>
+          <li>Google Gemini AI SDK</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Architecture &amp; Concepts</div>
+        <ul class="skill-list">
+          <li>Clean Architecture</li>
+          <li>Coroutines &amp; StateFlow</li>
+          <li>Git &amp; GitHub Version Control</li>
+          <li>Object-Oriented Programming (OOP)</li>
+          <li>OpenCV &amp; Image Processing</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements & Certifications -->
+  <section id="achievements"
+    style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="section-tag">// 04 — Honors &amp; Certifications</div>
+    <h2 class="section-title">Achievements &amp; Certifications</h2>
+    <div class="achievements-list">
+      <div class="achievement">
+        <div class="ach-icon">🏆</div>
+        <div class="ach-text">
+          <strong>QHackathon 2025 | Quantum University, Roorkee</strong> — Competed among <strong>330+ participants</strong> in a
+          36-hour AI-focused hackathon; architected and shipped <em>Astra SOS</em>, an Android emergency safety application with real-time location sharing.
+        </div>
+      </div>
+      <div class="achievement">
+        <div class="ach-icon">🚀</div>
+        <div class="ach-text">
+          <strong>RIT-A-THON 2025 | Roorkee Institute of Technology</strong> — Designed and deployed a cultural heritage
+          website with team Bug Bash under intense 24-hour hackathon time constraints.
+        </div>
+      </div>
+      <div class="achievement">
+        <div class="ach-icon">📜</div>
+        <div class="ach-text">
+          <strong>C++ Language Certification | IIT Bombay</strong> — Completed comprehensive certification covering
+          object-oriented programming (OOP), Standard Template Library (STL), pointers, memory management, and algorithmic problem-solving.
+        </div>
+      </div>
+      <div class="achievement">
+        <div class="ach-icon">📜</div>
+        <div class="ach-text">
+          <strong>C Language Certification | IIT Bombay</strong> — Completed foundational certification covering low-level
+          memory allocation, pointer arithmetic, and structured programming paradigms.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <div class="section-tag">// 05 — Background</div>
+    <h2 class="section-title">Education</h2>
+    <div class="edu-list">
+      <div class="edu-item">
+        <div class="edu-school">Roorkee Institute of Technology</div>
+        <div class="edu-degree">Bachelor of Technology – Computer Science and Engineering | CGPA: In Progress</div>
+        <div class="edu-year">08/2024 – 05/2028 · Roorkee, Uttarakhand</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-school">Shanti Niketan Senior Secondary School (CBSE)</div>
+        <div class="edu-degree">Class XII (CBSE) · 76.6%</div>
+        <div class="edu-year">2024 · Uttarakhand</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-school">Trident Public School (CBSE)</div>
+        <div class="edu-degree">Class X (CBSE) · 91%</div>
+        <div class="edu-year">2022 · Uttarakhand</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="contact-inner">
+      <div class="section-tag">// 06 — Connect</div>
+      <h2 class="section-title">Get in Touch</h2>
+      <p style="font-size: 0.88rem; color: var(--muted); max-width: 540px; line-height: 1.85;">
+        Currently seeking an internship or entry-level Android / Mobile Developer role. Whether you have an open opportunity, an interesting project to build, or would like to discuss Android architecture, feel free to reach out.
+      </p>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:shawshreya097@gmail.com"><span class="dot"></span> shawshreya097@gmail.com</a>
+        <a class="contact-link" href="https://linkedin.com/in/shreya-shaw" target="_blank"><span class="dot"></span> linkedin.com/in/shreya-shaw</a>
+        <a class="contact-link" href="https://github.com/bytecraft-sys" target="_blank"><span class="dot"></span> github.com/bytecraft-sys</a>
+        <a class="contact-link" href="tel:+919993974866"><span class="dot"></span> +91 99939 74866</a>
+        <a class="contact-link" href="https://bytecraft-sys.github.io" target="_blank"><span class="dot"></span> bytecraft-sys.github.io</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Shreya Shaw · Android Developer · Roorkee, Uttarakhand, India</span>
+    <span style="color: var(--accent-light);">Available for opportunities <span class="live-indicator"></span></span>
+  </footer>
+
+  <script>
+    // ── Category Tab Filtering & Show More Logic ──
+    const filterButtons = document.querySelectorAll('.cat-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    const showMoreWrapper = document.getElementById('showMoreWrapper');
+    const showMoreBtn = document.getElementById('showMoreBtn');
+    const showMoreText = document.getElementById('showMoreText');
+    const showMoreIcon = document.getElementById('showMoreIcon');
+
+    const INITIAL_VISIBLE_COUNT = 6;
+    let isExpanded = false;
+    let currentFilter = 'all';
+
+    function updateProjectVisibility() {
+      let matchingCards = [];
+
+      projectCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (currentFilter === 'all' || category === currentFilter) {
+          matchingCards.push(card);
+        } else {
+          card.classList.add('is-hidden');
+          card.classList.remove('is-collapsed');
+        }
+      });
+
+      const totalMatching = matchingCards.length;
+
+      matchingCards.forEach((card, index) => {
+        card.classList.remove('is-hidden');
+        if (!isExpanded && index >= INITIAL_VISIBLE_COUNT) {
+          card.classList.add('is-collapsed');
+        } else {
+          card.classList.remove('is-collapsed');
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(12px)';
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 35 * Math.min(index, 6));
+        }
+      });
+
+      if (totalMatching > INITIAL_VISIBLE_COUNT) {
+        showMoreWrapper.style.display = 'flex';
+        const hiddenCount = totalMatching - INITIAL_VISIBLE_COUNT;
+        if (isExpanded) {
+          showMoreText.textContent = 'Show Less';
+          showMoreIcon.textContent = '↑';
+        } else {
+          showMoreText.textContent = `Show More Projects (${hiddenCount} More)`;
+          showMoreIcon.textContent = '↓';
+        }
+      } else {
+        showMoreWrapper.style.display = 'none';
+      }
+    }
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        currentFilter = btn.getAttribute('data-filter');
+        isExpanded = false; // Reset to collapsed view on category switch
+        updateProjectVisibility();
+      });
+    });
+
+    if (showMoreBtn) {
+      showMoreBtn.addEventListener('click', () => {
+        isExpanded = !isExpanded;
+        updateProjectVisibility();
+        if (!isExpanded) {
+          document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+
+    // Initialize visibility on page load
+    updateProjectVisibility();
+
+    // ── Custom Cursor ──
+    const cursorDot = document.querySelector('[data-cursor-dot]');
+    const cursorOutline = document.querySelector('[data-cursor-outline]');
+    
+    if (window.matchMedia("(pointer: fine)").matches) {
+      window.addEventListener('mousemove', (e) => {
+        const posX = e.clientX;
+        const posY = e.clientY;
+        
+        cursorDot.style.left = `${posX}px`;
+        cursorDot.style.top = `${posY}px`;
+        
+        cursorOutline.animate({
+          left: `${posX}px`,
+          top: `${posY}px`
+        }, { duration: 150, fill: 'forwards' });
+      });
+
+      document.querySelectorAll('a, button, .project-card, .achievement, .skill-group, .experience-card, .sketch-card').forEach(el => {
+        el.addEventListener('mouseenter', () => cursorOutline.classList.add('hovering'));
+        el.addEventListener('mouseleave', () => cursorOutline.classList.remove('hovering'));
+      });
+    } else {
+      cursorDot.style.display = 'none';
+      cursorOutline.style.display = 'none';
+    }
+
+    // ── 3D Card Tilt ──
+    const cards = document.querySelectorAll('.project-card, .experience-card, .sketch-card');
+    cards.forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -3.5;
+        const rotateY = ((x - centerX) / centerX) * 3.5;
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.015, 1.015, 1.015)`;
+        card.style.transition = 'none';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = `perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)`;
+        card.style.transition = 'transform 0.4s ease';
+      });
+    });
+  </script>
+</body>
+
+</html>
