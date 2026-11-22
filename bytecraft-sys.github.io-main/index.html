@@ -26,63 +26,95 @@
   <div class="cursor-dot" data-cursor-dot></div>
   <div class="cursor-outline" data-cursor-outline></div>
 
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-logo">
-      Shreya<span>.</span>
+  <!-- Topbar Navigation (Capsule Style) -->
+  <nav class="topbar">
+    <div class="nav-brand">
+      <div class="brand-monogram">
+        <span class="monogram-letter">S</span>
+      </div>
+      <div class="brand-text-col">
+        <div class="brand-name">SHREYA</div>
+        <div class="brand-tagline">
+          <span class="tag-bar tag-orange"></span>
+          <span>MOBILE SOFTWARE ENGINEER</span>
+          <span class="tag-bar tag-cyan"></span>
+        </div>
+      </div>
     </div>
-    <div class="nav-links">
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-      <a class="nav-cta" href="mailto:shawshreya097@gmail.com">Get in Touch ↗</a>
+
+    <div class="nav-capsule">
+      <a href="#home" class="nav-capsule-item active">Home</a>
+      <a href="#projects" class="nav-capsule-item">Projects</a>
+      <a href="#skills" class="nav-capsule-item">Skills</a>
+      <a href="#experience" class="nav-capsule-item">Experience</a>
+      <a href="#education" class="nav-capsule-item">Education</a>
+      <a href="#contact" class="nav-capsule-item">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <a href="mailto:shawshreya097@gmail.com?subject=Resume%20Request%20-%20Shreya%20Shaw" class="nav-pill-btn nav-resume-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+        <span>Resume</span>
+        <span class="ext-icon">↗</span>
+      </a>
+      <a href="#contact" class="nav-pill-btn nav-connect-btn">
+        <span>Let's Connect</span>
+        <span class="btn-arrow">→</span>
+      </a>
     </div>
   </nav>
 
   <!-- Hero Section with Sketch Avatar Card -->
-  <section class="hero">
+  <section id="home" class="hero">
     <div class="hero-container">
       <div class="hero-content">
-        <div class="hero-tag">
-          // Android Developer · Roorkee, Uttarakhand, India
+        <!-- Status Pill -->
+        <div class="hero-status-pill">
+          <span class="status-pulse-dot"></span>
+          <span class="status-text">Available for Opportunities</span>
+          <span class="status-divider">|</span>
+          <span class="status-loc">Uttarakhand, IN</span>
         </div>
-        <h1 class="hero-name">
-          Shreya<br /><em>Shaw</em>
-          <span class="hero-badge-pill">Mobile Software Engineer</span>
+
+        <!-- Headline -->
+        <h1 class="hero-headline">
+          Architecting Ideas Into<br />
+          <span class="headline-gradient">Impactful Android Apps.</span>
         </h1>
-        <p class="hero-role">
-          Computer Science Engineering student with <strong>2+ years of self-directed Android engineering experience</strong>.
-          Proficient in <strong>Kotlin</strong>, <strong>Jetpack Compose</strong>, <strong>MVVM architecture</strong>,
-          and <strong>Firebase</strong>, with a strong foundation in building scalable, production-ready mobile applications.
+
+        <!-- Typewriter Subtitle -->
+        <div class="hero-typewriter-row">
+          <span class="typewriter-prefix">Specializing as</span>
+          <span class="typewriter-badge">
+            <span id="typewriter-text" class="typewriter-content">Android Developer</span><span class="typewriter-cursor">|</span>
+          </span>
+        </div>
+
+        <!-- Bio Paragraph -->
+        <p class="hero-bio">
+          I'm <strong>Shreya Shaw</strong>, an Android Developer and Computer Science undergraduate focused on engineering modern, production-grade <strong>Android applications</strong>, scalable <strong>clean mobile architectures</strong>, and reactive <strong>user experiences</strong>.
         </p>
 
-        <div class="hero-ctas">
-          <a class="btn btn-primary" href="mailto:shawshreya097@gmail.com">Get in Touch ↗</a>
-          <a class="btn btn-ghost" href="#projects">Explore Projects ↓</a>
-          <a class="btn btn-ghost" href="https://github.com/bytecraft-sys" target="_blank">GitHub (18 Repos)</a>
-          <a class="btn btn-ghost" href="https://linkedin.com/in/shreya-shaw" target="_blank">LinkedIn</a>
+        <!-- CTA Buttons -->
+        <div class="hero-action-row">
+          <a class="hero-btn hero-btn-primary" href="#projects">
+            <span>Explore My Work</span>
+            <span class="btn-arrow">→</span>
+          </a>
+          <a class="hero-btn hero-btn-secondary" href="mailto:shawshreya097@gmail.com?subject=Resume%20Request%20-%20Shreya%20Shaw">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            <span>Download Resume</span>
+          </a>
+          <a class="hero-btn hero-btn-outline" href="#contact">
+            <span>Let's Connect</span>
+          </a>
         </div>
 
-        <div class="hero-stats">
-          <div>
-            <div class="stat-num">2+</div>
-            <div class="stat-label">Years Android Experience</div>
-          </div>
-          <div>
-            <div class="stat-num">18</div>
-            <div class="stat-label">Shipped Repositories</div>
-          </div>
-          <div>
-            <div class="stat-num">10+</div>
-            <div class="stat-label">Hackathon Competitors ('25)</div>
-          </div>
-          <div>
-            <div class="stat-num">2×</div>
-            <div class="stat-label">IIT Bombay Certified</div>
-          </div>
+        <!-- Highlights Strip -->
+        <div class="hero-highlights">
+          <div class="highlight-item"><span class="highlight-icon">📱</span> Kotlin &amp; Jetpack Compose</div>
+          <div class="highlight-item"><span class="highlight-icon">⚡</span> Clean Architecture &amp; MVVM</div>
+          <div class="highlight-item"><span class="highlight-icon">🚀</span> Production Shipped</div>
         </div>
       </div>
 
@@ -111,6 +143,49 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Stat Cards Row (Screenshot 3) -->
+    <div class="hero-stat-cards">
+      <div class="stat-glass-card">
+        <div class="stat-card-header">
+          <span class="stat-card-category">DEGREE</span>
+          <span class="stat-card-icon">🎓</span>
+        </div>
+        <div class="stat-card-title">B.Tech CSE</div>
+        <div class="stat-card-sub">Roorkee Institute of Technology</div>
+        <div class="stat-card-meta">2024–Present</div>
+      </div>
+
+      <div class="stat-glass-card">
+        <div class="stat-card-header">
+          <span class="stat-card-category">ANDROID EXPERIENCE</span>
+          <span class="stat-card-icon">💼</span>
+        </div>
+        <div class="stat-card-title">2+ Years</div>
+        <div class="stat-card-sub">Kotlin &amp; Jetpack Compose</div>
+        <div class="stat-card-meta">Clean MVVM Architecture</div>
+      </div>
+
+      <div class="stat-glass-card">
+        <div class="stat-card-header">
+          <span class="stat-card-category">PRODUCTION &amp; OSS</span>
+          <span class="stat-card-icon">&lt;/&gt;</span>
+        </div>
+        <div class="stat-card-title">18</div>
+        <div class="stat-card-sub">Shipped Repositories</div>
+        <div class="stat-card-meta">Open-Source Mobile Builds</div>
+      </div>
+
+      <div class="stat-glass-card">
+        <div class="stat-card-header">
+          <span class="stat-card-category">NATIONAL HACKATHON</span>
+          <span class="stat-card-icon">🏆</span>
+        </div>
+        <div class="stat-card-title">10+ Teams</div>
+        <div class="stat-card-sub">QHackathon 2025</div>
+        <div class="stat-card-meta">Astra SOS Emergency App</div>
       </div>
     </div>
   </section>
@@ -803,7 +878,7 @@
     }
 
     // ── 3D Card Tilt ──
-    const cards = document.querySelectorAll('.project-card, .experience-card, .sketch-card');
+    const cards = document.querySelectorAll('.project-card, .experience-card, .sketch-card, .stat-glass-card');
     cards.forEach(card => {
       card.addEventListener('mousemove', e => {
         const rect = card.getBoundingClientRect();
@@ -819,6 +894,63 @@
       card.addEventListener('mouseleave', () => {
         card.style.transform = `perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)`;
         card.style.transition = 'transform 0.4s ease';
+      });
+    });
+
+    // ── Typewriter Effect ──
+    (function() {
+      const phrases = [
+        "Android Developer",
+        "Kotlin & Compose Specialist",
+        "Mobile UI Architect",
+        "CSE Undergraduate"
+      ];
+      let pIdx = 0, cIdx = 0, deleting = false;
+      const target = document.getElementById("typewriter-text");
+      if (!target) return;
+
+      function loop() {
+        const full = phrases[pIdx];
+        if (deleting) {
+          target.textContent = full.substring(0, cIdx - 1);
+          cIdx--;
+        } else {
+          target.textContent = full.substring(0, cIdx + 1);
+          cIdx++;
+        }
+
+        let speed = deleting ? 40 : 85;
+
+        if (!deleting && cIdx === full.length) {
+          speed = 1900;
+          deleting = true;
+        } else if (deleting && cIdx === 0) {
+          deleting = false;
+          pIdx = (pIdx + 1) % phrases.length;
+          speed = 450;
+        }
+
+        setTimeout(loop, speed);
+      }
+      loop();
+    })();
+
+    // ── Active Navigation Capsule Item on Scroll ──
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section[id]');
+      const scrollY = window.pageYOffset;
+      sections.forEach(sec => {
+        const height = sec.offsetHeight;
+        const top = sec.offsetTop - 120;
+        const id = sec.getAttribute('id');
+        if (scrollY > top && scrollY <= top + height) {
+          document.querySelectorAll('.nav-capsule-item').forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + id) {
+              link.classList.add('active');
+            }
+          });
+        }
       });
     });
   </script>
